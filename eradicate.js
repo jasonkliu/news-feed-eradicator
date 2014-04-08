@@ -149,14 +149,21 @@ fbLink = $("<a href='javascript:;'>News Feed Eradicator</a>")
 // scripts before we attempt to replace them
 setInterval(function(){
     // Replace the news feed
-	$("div#pagelet_home_stream").replaceWith(quoteDiv);
-	$("div[id^='topnews_main_stream']").replaceWith(quoteDiv);
+	// $("div#pagelet_home_stream").replaceWith(quoteDiv);
+	// $("div[id^='topnews_main_stream']").replaceWith(quoteDiv);
 
     // Delete the ticker
     $("div#pagelet_ticker").remove();
     
     // Delete the trending box
     $("div#pagelet_trending_tags_and_topics").remove();
+
+    // Delete the update status box
+    // $("div#pagelet_composer").remove();
+
+	// Replace the update status box
+    $("div#pagelet_composer").replaceWith(quoteDiv);
+
 }, 1000);
 
 
